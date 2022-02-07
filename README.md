@@ -6,7 +6,7 @@ I upgraded my web server from Fedora 33 to Fedora 35.  This means it now runs PH
 
 ## The Solution
 
-I created a Docker container using Fedora 34 as the base, containing the Apache HTTP server and PHP 7.4.  It binds to my existing Owncloud installation, config and data at /var/www/html and to the mysql socket of my existing mariadb server: /var/lib/mysql/mysql.sock.  I use redis for Owncloud caching so that is installed as well.
+I created a Docker container using Fedora 34 as the base, containing the Apache HTTP server and PHP 7.4.  It binds to my existing Owncloud installation, config and data at /var/www/html and to the mysql socket of my existing mariadb server: /var/lib/mysql/mysql.sock.  My Owncloud config specifies the use of redis for Owncloud caching so that is installed inside the container.
 
 I set up proxy routing to the container's HTTP port from the /owncloud URL in my main HTTP server's configuration.
 
