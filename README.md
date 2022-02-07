@@ -15,4 +15,4 @@ I set up proxy routing to the container's HTTP port from the /owncloud URL in my
 
 I set up a systemd service to start the container running on boot.
 
-This is meant to be a temporary fix, until the time when Owncliud supports PHP 8 and I can return to my previous configuration.  Switching back will only require that I remove the proxy routing in my main HTTP server's config.
+This is meant to be a temporary fix, until the time when Owncloud supports PHP 8 and I can return to my previous configuration.  Switching back only requires that I remove the proxy routing in my main HTTP server's config.
