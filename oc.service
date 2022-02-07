@@ -1,0 +1,13 @@
+[Unit]
+Description=Owncloud Web Server
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Restart=always
+PIDFile=/run/oc-web-server.pid
+ExecStart=/usr/bin/podman start --attach oc
+ExecStop=/usr/bin/podman stop oc
+
+[Install]
+WantedBy=multi-user.target
